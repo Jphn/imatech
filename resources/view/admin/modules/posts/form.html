@@ -1,0 +1,43 @@
+<h1>{{title}}</h1>
+
+<hr>
+
+<a href="{{URL}}/admin/posts">
+    <button class="btn btn-warning">
+        Voltar
+    </button>
+</a>
+
+<hr>
+
+{{status}}
+
+<form method="post">
+    <div class="form-group">
+        <label for="titulo">Título da postagem</label>
+        <input type="text" name="titulo" class="form-control" required value="{{titulo}}">
+    </div>
+
+    <div class="form-group my-3">
+        <label for="conteudo">Conteúdo da postagem</label>
+        <textarea name="conteudo" rows="5" class="form-control">{{conteudo}}</textarea>
+    </div>
+
+    <div class="form-group my-3">
+        <select class="form-select" aria-label="Selecione a categoria" name="categoria" required>
+            <option value="" disabled {{this}}>Selecione a categoria</option>
+            {{options}}
+        </select>
+    </div>
+
+    <div class="form-group my-3">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" name="visibilidade" {{avaiable}}>
+            <label class="form-check-label" for="flexSwitchCheckChecked">Postagem Visível?</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-success">Enviar</button>
+    </div>
+</form>

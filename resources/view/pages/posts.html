@@ -1,0 +1,34 @@
+<h1>Postagens</h1>
+
+<hr>
+
+{{itens}}
+
+{{pagination}}
+
+<hr>
+
+<section id="form">
+    <h3>Enviar Postagem</h3>
+    <form action="?page=1" method="post">
+        <div class="form-group">
+            <label for="titulo">
+                Título
+            </label>
+            <input type="text" name="titulo" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="conteudo">
+                Conteúdo
+            </label>
+            <textarea class="form-control" name="conteudo" rows="5" required></textarea>
+        </div>
+
+        <div class="form-group mt-3">
+            <button type="submit" class="btn btn-success" disabled>
+                Enviar
+            </button>
+        </div>
+    </form>
+</section>

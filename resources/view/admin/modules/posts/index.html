@@ -1,0 +1,37 @@
+<h1>Postagens</h1>
+
+<p>Postagens Cadastradas no Blog</p>
+
+<hr>
+
+<a href="{{URL}}/admin/posts/new" class="btn btn-outline-success">
+    Criar Nova Postagem
+</a>
+
+<a href="{{URL}}/admin/categories/new" class="btn btn-outline-light">
+    Criar Nova Categoria
+</a>
+
+<hr>
+
+{{status}}
+
+<table class="table table-light table-striped">
+    <thead>
+        <tr>
+            <th>Nº</th>
+            <th style="width: 200px;">Nome</th>
+            <th>Conteúdo</th>
+            <th>Usuário</th>
+            <th>Categoria</th>
+            <th>Data</th>
+            <th style="width: 200px;">Ações</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{itens}}
+    </tbody>
+</table>
+
+{{pagination}}
